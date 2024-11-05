@@ -1,1 +1,0 @@
-/usr/bin/c++  -std=c++20 -fexceptions -g -Wall CMakeFiles/problem_01.dir/main.cpp.o -o ../../../bin/problem_01 

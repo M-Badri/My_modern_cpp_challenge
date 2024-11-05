@@ -1,29 +1,27 @@
-cmake_minimum_required(VERSION 3.7.0)
-project(cppchallenger)
+cmake_minimum_required(VERSION 3.20)
+project(MyModernCppChallenges)
 
-if (UNIX)
-  message(status "** Setting GCC flags")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++20 -fexceptions -g -Wall")
-elseif(WIN32)
-  message(status "** Setting MSVC flags")
-  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /EHsc /std:c++latest")
-  
-  add_definitions(-D_CRT_SECURE_NO_WARNINGS)
-endif()
-message(status "** CMAKE_CXX_FLAGS: ${CMAKE_CXX_FLAGS}")
+message(STATUS "C++ Compiler: ${CMAKE_CXX_COMPILER}")
+message(STATUS "C++ Compiler Version: ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS "C++ Compiler ID: ${CMAKE_CXX_COMPILER_ID}")
 
-set(INCLUDE_PATH "${CMAKE_SOURCE_DIR}/include")
-set(LIBS_PATH "${CMAKE_SOURCE_DIR}/libs")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/bin")
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/${CMAKE_CXX_COMPILER_ID}_Debug")
+# set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/${CMAKE_CXX_COMPILER_ID}_Release")
 
-set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
-add_subdirectory(libs/ZipLib)
-add_subdirectory(libs/PDF-Writer)
-add_subdirectory(libs/PNGWriter)
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra")      # Debug flags
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall -O3") 
+# message(STATUS "C++ Debug flags: ${CMAKE_CXX_FLAGS_DEBUG}")
+# message(STATUS "C++ Release flags: ${CMAKE_CXX_FLAGS_RELEASE}")
 
-add_subdirectory(libs/cryptopp)
-# add_subdirectory(/curl)
-# add_subdirectory(libs/curlcpp)
+# Additional compiler flags
+# if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+#     message(STATUS "Building Debug version")
+# elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
+#     message(STATUS "Building Release version")
+# endif()
 
-add_subdirectory(Chapter01/problem_01)
+# Add each top-level project directory
+add_subdirectory(Chapter01)
+add_subdirectory(Chapter02)
+

@@ -1,0 +1,2 @@
+add_subdirectory(problem_05)
+add_subdirectory(problem_06)

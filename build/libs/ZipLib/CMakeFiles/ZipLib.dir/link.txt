@@ -1,2 +1,0 @@
-/usr/bin/ar qc libZipLib.a CMakeFiles/ZipLib.dir/ZipArchive.cpp.o CMakeFiles/ZipLib.dir/ZipArchiveEntry.cpp.o CMakeFiles/ZipLib.dir/ZipFile.cpp.o CMakeFiles/ZipLib.dir/detail/EndOfCentralDirectoryBlock.cpp.o CMakeFiles/ZipLib.dir/detail/ZipCentralDirectoryFileHeader.cpp.o CMakeFiles/ZipLib.dir/detail/ZipGenericExtraField.cpp.o CMakeFiles/ZipLib.dir/detail/ZipLocalFileHeader.cpp.o
-/usr/bin/ranlib libZipLib.a
