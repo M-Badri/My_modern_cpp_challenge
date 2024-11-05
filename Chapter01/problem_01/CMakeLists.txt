@@ -1,5 +1,3 @@
-# dir_1/CMakeLists.txt
-
 # Collect all .cpp files in this directory
 file(GLOB SOURCES "*.cpp")
 
