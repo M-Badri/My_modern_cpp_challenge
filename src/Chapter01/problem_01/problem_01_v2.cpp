@@ -19,5 +19,5 @@ int main()
    |  std::ranges::to<std::vector<size_t>>(); // Moves a Range to a vector
 
    auto sum = std::accumulate(myVectRenge.begin(), myVectRenge.end(), 1);
-   std::cout << "The summation of all numbers: " << sum << std::endl;
+   std::cout << "The sum of naturals smaller than " << limit << " divisible by 3 and 5 is: " << sum << std::endl;
 }
