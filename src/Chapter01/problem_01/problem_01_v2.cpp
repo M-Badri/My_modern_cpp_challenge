@@ -2,7 +2,7 @@
 #include <format>
 #include <string>
 #include <vector>
-#include <numeric>  // accumulate
+#include <numeric>  //  accumulate
 #include <algorithm>
 #include <ranges>
 
