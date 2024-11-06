@@ -8,8 +8,9 @@ message(STATUS "C++ Compiler ID: ${CMAKE_CXX_COMPILER_ID}")
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_DEBUG "${CMAKE_BINARY_DIR}/${CMAKE_CXX_COMPILER_ID}_Debug")
 # set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_RELEASE "${CMAKE_BINARY_DIR}/${CMAKE_CXX_COMPILER_ID}_Release")
 
-set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -Wall -Wextra")      # Debug flags
-set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -Wall -O3") 
+set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} -std=c++23 -pedantic -Wall -Wextra ")      # Debug flags
+set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -std=c++23 -pedantic -Wall -Wextra") 
+# target_compile_features(${EXEC_NAME} PRIVATE cxx_std_20)
 # message(STATUS "C++ Debug flags: ${CMAKE_CXX_FLAGS_DEBUG}")
 # message(STATUS "C++ Release flags: ${CMAKE_CXX_FLAGS_RELEASE}")
 

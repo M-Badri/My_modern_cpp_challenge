@@ -8,5 +8,5 @@ foreach(SOURCE_FILE ${SOURCES})
     
     # Define an executable for each source file
     add_executable(${EXEC_NAME} ${SOURCE_FILE})
-    target_compile_features(${EXEC_NAME} PRIVATE cxx_std_20)        
+    target_compile_features(${EXEC_NAME} PRIVATE cxx_std_23)        
 endforeach()

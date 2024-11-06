@@ -6,5 +6,5 @@ foreach(SOURCE_FILE ${SOURCES})
     # Extract the file name without extension to use as the executable name
     get_filename_component(EXEC_NAME ${SOURCE_FILE} NAME_WE)
     add_executable(${EXEC_NAME} ${SOURCE_FILE})
-    target_compile_features(${EXEC_NAME} PRIVATE cxx_std_20) 
+    target_compile_features(${EXEC_NAME} PRIVATE cxx_std_23) 
 endforeach()

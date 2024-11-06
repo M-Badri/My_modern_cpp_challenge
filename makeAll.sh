@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Define the compilers and build types you want to use
-compilers=("icx;icpx" "gcc;g++")
+# compilers=("icx;icpx" "gcc;g++")
+compilers=("gcc;g++")
 build_types=("Debug" "Release")
 
 # Create the build directory if it doesn't exist
