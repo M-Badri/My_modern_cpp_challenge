@@ -8,30 +8,33 @@ int main() {
 
   using namespace std;
 
-  int a, LPN; 
+  int a; 
   cout << "Enter the number: " << endl;
   cin >> a;
 
-  vector<pair<int, bool>> allData;
+  vector<pair<int, bool>> dataList;
 
   for (auto i{2}; i<a; i++ ){
-    allData.push_back(make_pair(i, true));
+    dataList.push_back(make_pair(i, true));
   }
 
-  for (auto i{0}; auto data : allData){
+  for (auto i{0}; auto data : dataList){
     if(data.first){
       for (auto j = (data.first*data.first)-2; j<a-2; j++){
-        if(allData[j].first % data.first == 0){
-          allData[j].second = false;
+        if(dataList[j].first % data.first == 0){
+          dataList[j].second = false;
         }
       }
     }
     i++;
   }
 
-  for (auto i{0}; auto data : allData){
-    cout << data.first << " " << data.second << endl; 
+  auto LPN{0};
+  for (auto i{0}; auto data : dataList){
+    // cout << data.first << " " << data.second << endl; 
+    if(data.second){if(data.first > LPN){LPN=data.first;};}
   }
+  cout << LPN << "+++++++++++" << endl;
 
   return 0;
 }
