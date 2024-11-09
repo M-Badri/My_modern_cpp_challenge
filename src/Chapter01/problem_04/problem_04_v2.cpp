@@ -1,9 +1,6 @@
 #include <iostream>
-#include <utility>
 #include <vector> 
 #include <algorithm>
-
-
 
 int main() {
 
@@ -30,25 +27,16 @@ int main() {
     i++;
   }
 
-  auto LPN{0};
-  for (auto i{0}; auto data : dataList){
-    // cout << data.first << " " << data.second << endl; 
-    if(data.second){if(data.first > LPN){LPN=data.first;};}
-  }
-  cout << LPN << "+++++++++++" << endl;
-
-
-
   auto max_it = std::max_element(dataList.begin(), dataList.end(),
                 [](const std::pair<int, bool>& a, const std::pair<int, bool>& b){
                   if (!a.second) return true;
                   if (!b.second) return false;
                   return a.first < b.first;
                 }        
-  
   );
 
-  cout << max_it->first << "**********" << endl;
+  auto frmtd_str = format("The largest prime number smaller than {} is: {}", a, max_it->first);
+  cout << "\n" << frmtd_str << endl;
 
   return 0;
 }
