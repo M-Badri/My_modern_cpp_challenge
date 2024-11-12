@@ -14,6 +14,7 @@ int main() {
     dataList.push_back(make_pair(i, true));
   }
 
+  // Finds the prime numbers from 1 up to the given number
   for (auto i{0}; auto data : dataList){
     if(data.first){
       for (auto j = (data.first*data.first)-2; j<a-2; j++){

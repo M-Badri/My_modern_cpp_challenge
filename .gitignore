@@ -37,5 +37,5 @@
 /CMakeSettings.json
 /out/build
 /Testing/Temporary
-/build
+/build/*
 /.vscode
