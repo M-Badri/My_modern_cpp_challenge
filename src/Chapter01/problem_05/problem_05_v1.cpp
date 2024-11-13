@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-int main() // This c version must be updated!
+int main() // The current version of this solution must be updated!
 {
     using namespace std;
 
