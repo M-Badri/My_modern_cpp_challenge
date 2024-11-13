@@ -35,4 +35,4 @@ int main() // The current version of this solution must be updated!
     }
 
     return 0;
-} // 
+} // End
