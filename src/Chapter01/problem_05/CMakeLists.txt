@@ -1,4 +1,4 @@
-# Collect all .cpp files in this directory
+# Collect all .cpp files in this directory #
 file(GLOB SOURCES "*.cpp")
 
 # Loop through each source file to create an executable
